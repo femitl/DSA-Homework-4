@@ -1,0 +1,53 @@
+
+--- 1. Build the playlist ---
+true
+true
+true
+true
+true
+true
+duplicate s3: false
+playlist: [Obsessica, Damages, Love me JeJe, Girl Next Door, Gun to my Head, No Lie]
+--- 2. Look up songs ---
+find s4: Girl Next Door
+find s9: null
+--- 3. Play and move forward ---
+play s1: Obsessica
+play s9: null
+next: Damages
+next: Love me JeJe
+history: [Damages, Obsessica]
+--- 4. Up next ---
+true
+true
+true
+up next: [Obsessica, Gun to my Head, No Lie]
+next: Obsessica
+history: [Love me JeJe, Damages, Obsessica]
+--- 5. Back button ---
+back: Love me JeJe
+up next: [Obsessica, Gun to my Head, No Lie]
+history: [Damages, Obsessica]
+--- 6. Remove songs ---
+remove s5: true
+remove current (s3): false
+remove s9: false
+playlist: [Obsessica, Damages, Love me JeJe, Girl Next Door, No Lie]
+up next: [Obsessica, No Lie]
+--- 7. Removed songs are skipped ---
+next: Obsessica
+next: No Lie
+next at end: null
+now playing: No Lie
+back: Obsessica
+up next: [No Lie]
+--- 8. Play counts ---
+s1: 4
+s3: 2
+s6: 1
+s5 (removed): 0
+--- 9. Empty player ---
+next: null
+back: null
+now playing: null
+playlist: []
